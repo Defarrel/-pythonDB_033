@@ -50,7 +50,6 @@ def hasil_prediksi():
     try:
         conn = sqlite3.connect("Test.db")
         cursor = conn.cursor()
-        
         cursor.execute('''
         INSERT INTO nilai_siswa1 (Nama_Siswa, Biologi, Fisika, Inggris, Prediksi_Fakultas)
         VALUES (?, ?, ?, ?, ?)
@@ -92,19 +91,19 @@ tk_image = ImageTk.PhotoImage(resized_gambar)
 
 label_image = ttk.Label(input_frame2, image=tk_image)
 label_image.pack()
-#Pemograman
+#Nama Siswa
 Matkul_AIK3 = ttk.Label(input_frame1, text="Nama Siswa")
 Matkul_AIK3.pack(padx=10,pady=1,fill="x")
 #Entry 1
 judul_entry = ttk.Entry(input_frame1,textvariable=NAMA)
 judul_entry.pack(padx=10,pady=10,fill="x")
-#IBD
+#Biologi
 Matkul_Kewarganegaraan = ttk.Label(input_frame1, text="Biologi")
 Matkul_Kewarganegaraan.pack(padx=10,pady=1,fill="x")
 #Entry 2
 judul_entry = ttk.Entry(input_frame1,textvariable=BIOLOGI)
 judul_entry.pack(padx=10,pady=10,fill="x")
-#Swicthing
+#Fisika
 Matkul_AIK3 = ttk.Label(input_frame1, text="Fisika")
 Matkul_AIK3.pack(padx=10,pady=1,fill="x")
 #Entry 3
